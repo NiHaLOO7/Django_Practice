@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'basic_app/base.html' %}
+    {% block body_block %}
+        <div class="jumbotron">
+            <h1>This is Child.html</h1>
+            <h2>This is an example of template inheritance</h2>
+            <h1>{{ text|lower }}</h1>
+            <!-- custom filter registered using register-->
+            <h1>{{ text|cut:"HELLO" }}</h1>
+            <h1>{{ number|add:"99" }}</h1>
+            <!-- custom filter registered using annotation -->
+            <h1>{{ text|cut:"WORLD" }}</h1>
+        </div>
+    {% endblock %}

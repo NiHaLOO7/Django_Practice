@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to relative URL</h1>
+    <!-- 'Others' is the value of name variable that is set in the path for 'other' -->
+    <a href="{% url 'basic_app:Others' %}">Click here to navigate to others.html</a>
+    <br>
+    <br>
+    <br>
+    <!-- use 'index' with admin -->
+    <a href="{% url 'admin:index' %}">Link to the admin page</a>
+    <br>
+    <br>
+    <br>
+    <!-- name of the index url is 'Index' -->
+    <a href="{% url 'Index' %}">Link to the index page</a>
+    
+</body>
+</html>
