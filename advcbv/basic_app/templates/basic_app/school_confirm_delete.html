@@ -1,0 +1,16 @@
+{% extends 'basic_app/basic_app_base.html' %}
+{% block body_block %}
+
+<div style="margin-top: 5%">
+    <h1>Delete {{school.name}}?</h1>
+    <footer style="text-align:right;">
+        <form method="POST">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-danger mr-5" value="Submit">
+            <!-- no spaces between pk=school.pk -->
+            <a class="btn btn-brand" href="{% url 'basic_app:detail' pk=school.pk %}">Cancel</a>
+        </form>
+    </footer>
+</div>
+
+{% endblock %}

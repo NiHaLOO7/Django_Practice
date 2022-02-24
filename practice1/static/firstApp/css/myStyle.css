@@ -1,0 +1,12 @@
+h1 {
+    color : blue;
+}
+table .djangtwo {
+    border : solid black 1px;
+}
+td {
+    border-top: solid rgba(201,201,201,1) 0.5px;
+}
+h2 {
+    color: blueviolet;
+}

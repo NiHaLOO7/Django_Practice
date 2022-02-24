@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-static-top">
+        <div class="container">
+                <div><a class="navbar-brand" href="{% url 'Index' %}">HOME</div>
+                <div><a class="navbar-brand" style="color:black;" href="{% url 'admin:index' %}">Admin</a></div>
+                <div><a class="navbar-brand" style="color:black;" href="{% url 'basic_app:Register' %}">Register</a></div>
+                {% if user.is_authenticated %}
+                    <div><a class="navbar-brand" style="color:black;" href="{% url 'Logout' %}">Logout</a></div>
+                {% else %}   
+                    <div><a class="navbar-brand" style="color:black;" href="{% url 'basic_app:user_login' %}">Login</a></div>  
+                {% endif %}
+        </div>
+    </nav>
+    <div class="container">
+        {% block body_block %}
+        {% endblock %}
+    </div>
+</body>
+</html>
